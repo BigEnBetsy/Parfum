@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Maison de Parfum</title>
+  <title>Cognati - Maison de Parfum</title>
   <style>
     * {
       margin: 0;
@@ -13,102 +13,113 @@
 
     body {
       font-family: 'Georgia', serif;
-      background-color: #0d0d0d;
-      color: #f0f0f0;
+      background-color: #0b0b0b;
+      color: #d6c6aa;
       line-height: 1.6;
+      scroll-behavior: smooth;
     }
 
     header {
-      background-color: #1a1a1a;
-      padding: 40px 20px;
+      background-color: #111;
+      padding: 50px 20px;
       text-align: center;
-      position: relative;
+      border-bottom: 1px solid #222;
     }
 
     header h1 {
-      font-size: 3rem;
+      font-size: 3.2rem;
       letter-spacing: 2px;
-      color: #fff;
+      color: #d4af37;
+      text-transform: uppercase;
+      text-shadow: 0 0 10px rgba(212, 175, 55, 0.2);
     }
 
     header p {
       font-style: italic;
-      color: #ccc;
+      color: #b6a98d;
       margin-top: 10px;
+      font-size: 1.1rem;
     }
 
     nav {
       display: flex;
       justify-content: center;
-      gap: 30px;
-      background-color: #111;
-      padding: 20px 0;
+      gap: 40px;
+      background-color: #0f0f0f;
+      padding: 18px 0;
+      border-bottom: 1px solid #1c1c1c;
     }
 
     nav a {
       text-decoration: none;
-      color: #ccc;
+      color: #b6a98d;
       font-size: 1rem;
+      letter-spacing: 0.5px;
       transition: color 0.3s ease;
     }
 
     nav a:hover {
-      color: #fff;
+      color: #d4af37;
     }
 
-    .hero {
-      background: url('https://images.unsplash.com/photo-1600180758890-5c84b21ba5e1') no-repeat center center/cover;
-      height: 80vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: white;
-      position: relative;
-    }
+.hero {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(10, 10, 10, 0.9), rgba(13,13,13, 1) 90%),
+    url('img/bg.jpg') no-repeat center center/cover;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  position: relative;
+}
 
-    .hero::after {
-      content: "";
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0, 0, 0, 0.5);
-    }
+.section {
+  padding: 100px 20px 60px;
+}
+
+
+
 
     .hero-content {
-      position: relative;
       z-index: 2;
     }
 
     .hero h2 {
       font-size: 3rem;
-      margin-bottom: 20px;
+      margin-bottom: 25px;
+      color: #f9f5ec;
+      text-shadow: 0 0 8px rgba(0,0,0,0.5);
     }
 
     .hero button {
-      padding: 12px 25px;
-      background-color: #b68c5a;
+      padding: 12px 30px;
+      background-color: #d4af37;
       border: none;
-      color: white;
+      color: #111;
       font-size: 1rem;
+      font-weight: bold;
       cursor: pointer;
-      transition: background 0.3s ease;
+      transition: all 0.3s ease;
+      border-radius: 5px;
     }
 
     .hero button:hover {
-      background-color: #a6783f;
+      background-color: #c29e2d;
+      color: #fff;
     }
 
     .section {
-      padding: 60px 20px;
-      max-width: 1200px;
+      padding: 70px 20px;
+      max-width: 1100px;
       margin: auto;
+      text-align: center;
     }
 
     .section h2 {
-      text-align: center;
-      font-size: 2rem;
-      margin-bottom: 40px;
-      color: #fff;
+      font-size: 2.2rem;
+      margin-bottom: 50px;
+      color: #e3d5b3;
     }
 
     .products {
@@ -118,15 +129,16 @@
     }
 
     .product {
-      background-color: #1a1a1a;
-      padding: 20px;
+      background-color: #151515;
+      padding: 25px;
       border-radius: 12px;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 1px solid #1f1f1f;
     }
 
     .product:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 10px 20px rgba(255,255,255,0.1);
+      transform: translateY(-8px);
+      box-shadow: 0 12px 20px rgba(212,175,55,0.1);
     }
 
     .product img {
@@ -136,21 +148,29 @@
 
     .product h3 {
       margin-top: 15px;
-      font-size: 1.2rem;
-      color: #f5f5f5;
+      font-size: 1.3rem;
+      color: #f0eadd;
     }
 
     .product p {
-      color: #ccc;
+      color: #a99f8e;
       font-size: 0.9rem;
+      margin-top: 5px;
+    }
+
+    #contact p {
+      color: #b6a98d;
+      font-size: 1rem;
+      line-height: 1.8;
     }
 
     footer {
-      background-color: #111;
+      background-color: #0f0f0f;
       padding: 40px 20px;
       text-align: center;
-      color: #888;
+      color: #7a705d;
       font-size: 0.9rem;
+      border-top: 1px solid #1c1c1c;
     }
 
     @media (max-width: 600px) {
@@ -203,9 +223,9 @@
 
   <section id="contact" class="section">
     <h2>Contacteer Ons</h2>
-    <p style="text-align: center; color: #ccc;">
+    <p>
       Cognati<br>
-      Hamme 9220, Hamme, Belgie<br>
+      Hamme 9220, Hamme, België<br>
       Email: deNevenParfum@gmail.com
     </p>
   </section>

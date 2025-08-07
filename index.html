@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Maison de Parfum</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Georgia', serif;
+      background-color: #0d0d0d;
+      color: #f0f0f0;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #1a1a1a;
+      padding: 40px 20px;
+      text-align: center;
+      position: relative;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      letter-spacing: 2px;
+      color: #fff;
+    }
+
+    header p {
+      font-style: italic;
+      color: #ccc;
+      margin-top: 10px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      background-color: #111;
+      padding: 20px 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #ccc;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #fff;
+    }
+
+    .hero {
+      background: url('https://images.unsplash.com/photo-1600180758890-5c84b21ba5e1') no-repeat center center/cover;
+      height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      position: relative;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero h2 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    .hero button {
+      padding: 12px 25px;
+      background-color: #b68c5a;
+      border: none;
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .hero button:hover {
+      background-color: #a6783f;
+    }
+
+    .section {
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .section h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 40px;
+      color: #fff;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .product {
+      background-color: #1a1a1a;
+      padding: 20px;
+      border-radius: 12px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .product:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(255,255,255,0.1);
+    }
+
+    .product img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+
+    .product h3 {
+      margin-top: 15px;
+      font-size: 1.2rem;
+      color: #f5f5f5;
+    }
+
+    .product p {
+      color: #ccc;
+      font-size: 0.9rem;
+    }
+
+    footer {
+      background-color: #111;
+      padding: 40px 20px;
+      text-align: center;
+      color: #888;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      .hero h2 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Cognati</h1>
+    <p>Exquisite Fragrances for the Discerning Soul</p>
+  </header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#collection">Collectie</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Ervaar Pure Luxe</h2>
+      <button onclick="scrollToCollection()">Bekijk Collectie</button>
+    </div>
+  </section>
+
+  <section id="collection" class="section">
+    <h2>Onze Collectie</h2>
+    <div class="products">
+      <div class="product">
+        <img src="fotos/Reuk1.png" alt="Parfum 1">
+        <h3>Élixir Noire</h3>
+        <p>Een diepe, mystieke geur met tonen van amber en musk.</p>
+      </div>
+      <div class="product">
+        <img src="fotos/Reuk3.png" alt="Parfum 2">
+        <h3>Rosée Matinale</h3>
+        <p>Fris en bloemig, met een vleugje rozen en jasmijn.</p>
+      </div>
+      <div class="product">
+        <img src="fotos/Reuk4.png" alt="Parfum 3">
+        <h3>Bois Sacré</h3>
+        <p>Een warme houtachtige geur met hints van sandelhout en ceder.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <h2>Contacteer Ons</h2>
+    <p style="text-align: center; color: #ccc;">
+      Cognati<br>
+      Hamme 9220, Hamme, Belgie<br>
+      Email: deNevenParfum@gmail.com
+    </p>
+  </section>
+
+  <footer>
+    &copy; 2025 Cognati. Alle rechten voorbehouden.
+  </footer>
+
+  <script>
+    function scrollToCollection() {
+      document.getElementById('collection').scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+
+</body>
+</html>
